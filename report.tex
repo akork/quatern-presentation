@@ -1,0 +1,157 @@
+\documentclass{beamer}
+\usepackage{styles/fonts}
+\usepackage{svg}
+
+\begin{document}
+\title{Задание по курсу ``Введение в ркт''}   
+\author{Королев А. К. 8О-402Б} 
+\date{\today} 
+
+\frame{\titlepage} 
+
+% \frame{\frametitle{Table of contents}\tableofcontents} 
+
+
+\section{Section no.1} 
+\frame{\frametitle{F-35} 
+  \small
+Семейство малозаметных многофункциональных истребителей-бомбардировщиков пятого поколения, разработанное американской фирмой Lockheed Martin.
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{f35cool.jpg}
+\end{figure}
+}
+\subsection{Subsection no.1.1  }
+
+
+\frame{\frametitle{Характеристики}
+  \normalsize
+  % \def\arraystretch{1.5}
+  \begin{tabular}[c]{|l|c|}
+    \hline
+    Длина
+     & $15.57 \text{ м}$ \\
+    \hline
+    Ширина размаха крыльев
+     & $10.67 \text{ м}$ \\
+    \hline
+    Высота
+     & $4.38 \text{ м}$ \\
+    \hline
+    Площадь крыла
+     & $42.7 \text{ м}^{2}$ \\
+    \hline
+    Максимальная скорость
+     & $1930 \text{ км/ч}$ \\
+    \hline
+    Крейсерская скорость
+     & $850 \text{ км/ч}$ \\
+    \hline
+    Дальность полета
+     & $2200 \text{ км}$ \\
+    \hline
+    Максимальная взлетная масса
+     & $29100 \text{ кг}$ \\
+    \hline
+  \end{tabular}
+
+
+  \footnotesize
+
+  \vspace{0.5cm}
+    Дальность полета 2200 $\text{ км}$ соответствует ближнемагистралным самолетам (в терминологии гражданской авиации).
+
+    Взлетная масса $29100 \text{ кг}$ соответствует 3 классу по взлетной массе.
+}
+
+\subsection{Lists II}
+\frame{\frametitle{Число маха}
+  \begin{align*}
+    M = \frac{v}{a} =
+    &\frac{1930 \text{ км/ч}}{1191 \text{ км/ч}} = 1.62 \in  [1.2, 5] \implies \\
+    &\implies \textit{Сверхзвуковой}
+  \end{align*}
+}
+\frame{\frametitle{Форма крыла}
+\begin{columns}
+\column{0.5\textwidth}
+\small
+  Форма крыла - трапециевидная.
+
+  Стреловидность по передней кромке:
+  $ \chi _v = \arctan \frac{84}{125} = 0.6 \approx 33 ^{\circ} $
+
+  Стреловидность по задней кромке:
+  $ \chi _h = - \arctan \frac{35}{125} = - 0.27 \approx - 16 ^{\circ} $
+
+  Поперечный угол $\psi \approx 0$:
+  \scriptsize
+\begin{figure}
+\includesvg[width=\textwidth]{f35front.svg}
+\end{figure}
+\column{0.5\textwidth}
+\begin{figure}
+\includesvg[width=\textwidth]{main.svg}
+\end{figure}
+\end{columns}
+% \begin{center}
+% \includegraphics[height=3.0in]{f35single.png}
+% \end{center}
+}
+
+\frame{\frametitle{Классификация}
+  \normalsize
+  % \def\arraystretch{1.5}
+  \begin{tabular}[c]{|l|c|}
+    \hline
+    по числу крыльев & моноплан \\
+    \hline
+    по расположению крыльев & среднеплан \\
+    \hline
+    по типу и расположению оперения & хвостовое оперение \\
+    \hline
+  \end{tabular}
+}
+
+\subsection{Tables}
+\frame{\frametitle{Сужение крыла}
+\begin{columns}
+  \normalsize
+  $\eta = \frac{b_{\text{кр}}}{b_{\text{кн}}} = \frac{300}{70} = 4.28  $
+\column{0.5\textwidth}
+\begin{figure}
+\includesvg[width=\textwidth]{f35wing.svg}
+\end{figure}
+\end{columns}
+}
+
+\frame{\frametitle{Удлинение крыла}
+\begin{columns}
+  \normalsize
+  $\lambda = \frac{l}{b_{\text{ср}}} = \frac{490}{200} = 2.45$
+\column{0.5\textwidth}
+  \footnotesize
+\begin{figure}
+\includesvg[width=\textwidth]{f35wing2.svg}
+\end{figure}
+  \normalsize
+\end{columns}
+}
+
+\frame{\frametitle{Потребная тяга}
+  \normalsize
+  $G_{\text{ср}} \approx 25000 \text{ кг}$
+
+  $K \approx 10$
+
+  $P_{n} = \frac{G_{\text{ср}}}{K} = \frac{25000}{10} = 2500 \text{ кг}  $
+
+}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-engine: luatex 
+%%% TeX-command-extra-options: "-auxdir=/tmp"
+%%% End:

@@ -1,0 +1,64 @@
+\documentclass{beamer}
+
+\usepackage{styles/fonts}
+% \usepackage{styles/sections}
+% \usepackage{styles/tcb}
+% \usepackage{styles/colors}
+% \usepackage{styles/math}
+% \usepackage{styles/misc}
+
+\begin{document}
+
+\title{Выпускная квалификационная работа  на тему: 
+Интегрирование кинематических уравнений движения твердого тела в кватернионах.}   
+\author{Королев А. К. 8О-402Б} 
+\date{\today} 
+
+\frame{\titlepage} 
+
+% \frame{\frametitle{Table of contents}\tableofcontents} 
+
+
+\section{Section no.1} 
+\frame{\frametitle{Введение}
+  Возможные способа задания ориентации твердого тела:
+  \begin{itemize}
+  \item углы эйлера
+  \item матрица поворота (направляющих косинусов)
+  \item кватернион
+  \end{itemize}
+  
+}
+\begin{frame}{Motivation}
+  Углы эйлера
+  Ориентацию тела можно задавать тремя углами поворота вокруг осей координат.
+  Последовательные повороты должны производиться вокруг разных осей. Всего таких
+  комбинаций поворотов \( 3 \cdot 2 \cdot 2 = 12 \). Например, комбинация ZXZ
+  соответствует классическим углам Эйлера (прецессии, нутации, собственного
+  вращения);
+  комбинация ZXY - самолетным углам (рысканье, тангаж, крен).
+  \begin{figure}
+    \includegraphics[width=0.8\textwidth]{A4angles.png}
+    % \includegraphics[width=0.4\textwidth]{angles-ZXY.png}
+  \end{figure}
+\end{frame}
+\begin{frame}{Минусы углов Эйлера}
+  Существует проблема Gimbal Lock.
+  Существуют особые положения в которых число степеней свободы уменьшается на 1,
+  то есть из этих положений движение по одному из направлений невозможно.
+  Например, при угле нутации \( \theta = 0, \pi \) изменение других углов
+  приводит к вращению относительно одной и той же оси Z. 
+  \begin{figure}
+    \includegraphics[width=0.8\textwidth]{gimble.png}
+    % \includegraphics[width=0.4\textwidth]{angles-ZXY.png}
+  \end{figure}
+  
+\end{frame}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-engine: luatex 
+%%% End:
